@@ -6,7 +6,7 @@ module.exports.getToDo = async (req, res) => {
 }
 
 module.exports.saveToDo = (req, res) => {
-    const { text } = req.body;
+    var text = req.body.text;
 
     ToDoModel
         .create({ text })
